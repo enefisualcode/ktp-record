@@ -1,0 +1,3 @@
+import { describe, expect, it } from "vitest"; import { rowFor } from "./sheets";
+const p = { nik:"1234567890123456",nama:"SINTETIS",tempatLahir:"UJI",tanggalLahir:"01-01-1990",jenisKelamin:"",golonganDarah:"",alamat:"",rt:"",rw:"",kelurahanDesa:"",kecamatan:"",agama:"",statusPerkawinan:"",pekerjaan:"",kewarganegaraan:"WNI",berlakuHingga:"",confirmed:true as const};
+describe("mapping Sheets",()=>it("memiliki 19 kolom, NIK string, dan link foto",()=>{const row=rowFor(p, "https://drive.google.com/file/d/test/view");expect(row).toHaveLength(19);expect(row[1]).toBe(p.nik);expect(row[17]).toBe("DIPERIKSA PENGGUNA");expect(row[18]).toContain("drive.google.com");}));
