@@ -28,7 +28,7 @@ Endpoint `/api/ktp/save` memeriksa kolom B sebelum menambahkan baris baru, menyi
 
 ## Deploy ke Vercel
 
-Push repo ke Git lalu impor proyek di Vercel (framework akan terdeteksi sebagai Next.js). Tambahkan setiap variabel `.env.local` melalui **Project Settings → Environment Variables** untuk Production/Preview yang diperlukan, lalu deploy. Jangan pernah menaruh private key pada variabel `NEXT_PUBLIC_*`.
+Push repo ke Git lalu impor proyek di Vercel (framework akan terdeteksi sebagai Next.js). Tambahkan setiap variabel `.env.local` melalui **Project Settings → Environment Variables** untuk Production/Preview yang diperlukan, lalu deploy. Untuk login, `APP_PASSWORD` harus identik dengan password yang ingin dipakai dan `SESSION_SECRET` minimal 32 karakter. Setelah mengubah Environment Variables, lakukan **Redeploy**—deployment lama tidak otomatis menerima nilai baru. Jangan pernah menaruh private key pada variabel `NEXT_PUBLIC_*`.
 
 ## Menguji dengan aman
 
